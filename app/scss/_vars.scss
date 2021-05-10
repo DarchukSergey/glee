@@ -1,0 +1,39 @@
+$nav: #cecece;
+$custom: #243f4d;
+$ess: #a3bbc8;
+$orange: #fcd7b6;
+$orange-dots: #fde3cc;
+$title : #243f4d;
+$subtitle : #4f6b77;
+$button-text: #436372;
+$button-border: #b3b7b5;
+$black: #1a1a1a;
+$gray: #8b8b8b;
+$footer-gray: #7b7b7b;
+$footer-title: #1f2044;
+$card-description: #262626;
+$card-date: #222933;
+$card-bg: #f8f8f8;
+$service-bg:#fef7f0;
+$search:#edf1f4;
+$nav-divide: #fde7d3;
+
+%sans-400{
+    font-family: 'DM Sans-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%sans-700{
+    font-family: 'DM Sans-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%rubik-400{
+    font-family: 'Rubik-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%rubik-500{
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
+}

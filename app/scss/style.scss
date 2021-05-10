@@ -3,5 +3,124 @@
 @import 'reset';
 @import 'global';
 
+.header{
+    padding: 50px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.menu{
+    &__list{
+        display: flex;
+    }
+    &__list-item + &__list-item{
+        padding-left: 35px;
+    }
+    &__list-link{
+        @extend %rubik-500;
+        font-weight: bold ;
+        color: $button-text;
+        font-size: 15px;
+        transition: all .3s;
+        &--active{
+            color:  $nav;
+        }
+        &:hover{
+            color: black
+        }
+    }    
+}
+
+.user-nav{
+    display: flex; 
+    
+    &__link{
+        position: relative;
+    }
+
+    &__num{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 12px;
+        right: 23px;
+        font-size: 10px;
+        text-align: center;
+        line-height: 1.8;
+    }
+
+    &__buy{
+        &-img{
+            position: relative;
+            top: 20px;
+            left: 40px;
+        }
+    }
+
+    &__search{
+        &-img{
+            position: relative;
+            top: 17px;
+            left: 19px;
+        }
+    }
+
+    &__burger{
+        &-img{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+    }
+}
+
+.icon{
+    &__search{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: $search;
+        text-align: center;
+        margin-right: 23px;
+    }
+
+    &__heart{
+    border-radius: 35px 0 0 35px;
+    background-color: $orange;
+    width: 91px;
+    position: relative;
+    }
+
+    &__basket{
+    border-radius:0 35px 35px 0;
+    background-color: $orange;
+    width: 90px;
+    margin-right: 18px;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 40px;
+        background-color: $nav-divide;
+        right: 80px;
+        top: 5px;
+        }
+    }
+
+    &__burger{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: $ess;
+    }
+}
+
+
+
+
 
 @import 'media';
