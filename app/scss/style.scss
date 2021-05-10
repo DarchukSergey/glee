@@ -3,5 +3,223 @@
 @import 'reset';
 @import 'global';
 
+.header{
+    padding: 50px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.menu{
+    &__list{
+        display: flex;
+    }
+    &__list-item + &__list-item{
+        padding-left: 35px;
+    }
+    &__list-link{
+        @extend %rubik-500;
+        font-weight: bold ;
+        color: $button-text;
+        font-size: 15px;
+        transition: all .3s;
+        &--active{
+            color:  $nav;
+        }
+        &:hover{
+            color: black
+        }
+    }    
+}
+
+.user-nav{
+    display: flex; 
+    
+    &__link{
+        position: relative;
+    }
+
+    &__num{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 12px;
+        right: 23px;
+        font-size: 10px;
+        text-align: center;
+        line-height: 1.8;
+    }
+
+    &__buy{
+        &-img{
+            position: relative;
+            top: 20px;
+            left: 40px;
+        }
+    }
+
+    &__search{
+        &-img{
+            position: relative;
+            top: 17px;
+            left: 19px;
+        }
+    }
+
+    &__burger{
+        &-img{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+    }
+}
+
+.icon{
+    &__search{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: $search;
+        text-align: center;
+        margin-right: 23px;
+    }
+
+    &__heart{
+    border-radius: 35px 0 0 35px;
+    background-color: $orange;
+    width: 91px;
+    position: relative;
+    }
+
+    &__basket{
+    border-radius:0 35px 35px 0;
+    background-color: $orange;
+    width: 90px;
+    margin-right: 18px;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 40px;
+        background-color: $nav-divide;
+        right: 80px;
+        top: 5px;
+        }
+    }
+
+    &__burger{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: $ess;
+    }
+}
+
+.footer{ 
+    color: $footer-gray;
+    font-size: 14px;
+
+    &__logo{
+        display: block;
+        margin-bottom: 30px;     
+    }
+    &__menu{
+        &-list{
+            display: flex;
+            justify-content: space-between;
+        }
+        &-link{
+            border-right: 1px solid $footer-gray;
+            padding-right: 15px;
+        }
+        &-title{
+            display: block;
+            margin: 0 0 0 15px;
+            ::after{
+                border-left: 1px solid #000;
+            }
+        } 
+    }
+}
+
+.footer-top{
+    padding: 80px 0 77px 0;
+    border-bottom: 1px solid #dae4e9;
+    display: flex;
+    justify-content: space-between;
+    &__title{
+        font-size: 16px;
+        @extend %sans-700;
+        margin-bottom: 30px;
+        color: $footer-title;
+    //     display: inline;
+    // vertical-align: sub;
+    }
+    &__contact{
+        width: 200px;   
+        margin-right: 30px;
+    }
+    &__nav{
+        width: 200px;   
+        margin-right: 30px;
+    }
+    &__contact-form{
+        max-width: 270px;
+    }
+
+    &__item, 
+    &__adress,
+    &__tel,
+    &__email{
+        margin-bottom: 10px;
+    }
+
+    &__text{
+        margin-bottom: 40px;
+    }
+
+    &__form-input{
+        background-color: $service-bg;
+        border: none;
+        padding: 16px;
+        font-size: 12px;
+        @extend %sans-400;
+        max-width: 170px;
+    }
+
+    &__form-btn{
+        border: none;
+        font-size: 14px;
+        color: #fff;
+        background-color: #a3bbc8;
+        padding:14px 19px 14px 16px;
+    }
+    &__item-form{
+        display: flex;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        }  
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    padding-top: 35px;
+    &__copy{
+        display: contents;
+    }
+}
+
+input[type="email"]::placeholder {
+    color: #234969;
+} 
+
 
 @import 'media';
